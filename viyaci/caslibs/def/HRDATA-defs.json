@@ -1,0 +1,13 @@
+{
+    "attributes": {
+        "active": false,
+        "personal": false,
+        "subDirs": false
+    },
+    "description": "Datasets for HR.",
+    "name": "HRDATA",
+    "path": "/sasdata/lab10/caslibs/HRDATA",
+    "scope": "global",
+    "server": "cas-shared-default",
+    "type": "PATH"
+}

@@ -1,0 +1,16 @@
+{
+    "attributes": {
+        "active": false,
+        "authenticationDomain": "OracleDB",
+        "path": "tas",
+        "personal": false,
+        "schema": "ALBUMSHOP",
+        "subDirs": false
+    },
+    "description": "",
+    "name": "ALBUMSHOP",
+    "path": "",
+    "scope": "global",
+    "server": "cas-shared-default",
+    "type": "oracle"
+}

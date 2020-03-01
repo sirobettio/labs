@@ -1,0 +1,17 @@
+{
+    "attributes": {
+        "active": false,
+        "path": "tas",
+        "personal": false,
+        "pwd": "Orion123",
+        "schema": "ALBUMSHOP",
+        "subDirs": false,
+        "uid": "ALBUMSHOP"
+    },
+    "description": "Oracle DB - AlbumShop",
+    "name": "ALBUMSHOP",
+    "path": "",
+    "scope": "global",
+    "server": "cas-shared-default",
+    "type": "oracle"
+}

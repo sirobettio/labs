@@ -1,0 +1,13 @@
+{
+    "attributes": {
+        "active": false,
+        "personal": false,
+        "subDirs": false
+    },
+    "description": "Test datasets.",
+    "name": "TESTDATA",
+    "path": "/sasdata/lab10/caslibs/TESTDATA",
+    "scope": "global",
+    "server": "cas-shared-default",
+    "type": "PATH"
+}

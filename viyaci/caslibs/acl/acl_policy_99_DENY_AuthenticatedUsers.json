@@ -1,0 +1,95 @@
+{
+    "items": [
+        {
+            "identity": "*",
+            "identityType": "group",
+            "permission": "readInfo",
+            "type": "deny",
+            "version": 1
+        },
+        {
+            "identity": "*",
+            "identityType": "group",
+            "permission": "select",
+            "type": "deny",
+            "version": 1
+        },
+        {
+            "identity": "*",
+            "identityType": "group",
+            "permission": "insert",
+            "type": "deny",
+            "version": 1
+        },
+        {
+            "identity": "*",
+            "identityType": "group",
+            "permission": "update",
+            "type": "deny",
+            "version": 1
+        },
+        {
+            "identity": "*",
+            "identityType": "group",
+            "permission": "delete",
+            "type": "deny",
+            "version": 1
+        },
+        {
+            "identity": "*",
+            "identityType": "group",
+            "permission": "createTable",
+            "type": "deny",
+            "version": 1
+        },
+        {
+            "identity": "*",
+            "identityType": "group",
+            "permission": "dropTable",
+            "type": "deny",
+            "version": 1
+        },
+        {
+            "identity": "*",
+            "identityType": "group",
+            "permission": "alterTable",
+            "type": "deny",
+            "version": 1
+        },
+        {
+            "identity": "*",
+            "identityType": "group",
+            "permission": "promote",
+            "type": "deny",
+            "version": 1
+        },
+        {
+            "identity": "*",
+            "identityType": "group",
+            "permission": "alterCaslib",
+            "type": "deny",
+            "version": 1
+        },
+        {
+            "identity": "*",
+            "identityType": "group",
+            "permission": "manageAccess",
+            "type": "deny",
+            "version": 1
+        },
+        {
+            "identity": "*",
+            "identityType": "group",
+            "permission": "deleteSource",
+            "type": "deny",
+            "version": 1
+        },
+        {
+            "identity": "*",
+            "identityType": "group",
+            "permission": "limitedPromote",
+            "type": "deny",
+            "version": 1
+        }
+    ]
+}
