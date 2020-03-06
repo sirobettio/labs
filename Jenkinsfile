@@ -15,7 +15,7 @@ pipeline {
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 echo "####################################"
                 sh "${env.WORKSPACE}/viyaci/scripts/sas_admin_profile.sh ${SAS_ADMIN_CREDS_USR} ${SAS_ADMIN_CREDS_PSW}"
-                sh "${env.WORKSPACE}/viyaci/scripts/create-caslibs.sh"
+                sh "${env.WORKSPACE}/viyaci/scripts/create_caslibs.sh"
             }
         }
         stage('folders') {
