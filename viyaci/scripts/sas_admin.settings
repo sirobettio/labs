@@ -1,2 +1,3 @@
-SAS_CLI_PROFILE="lab13-viya35"
-SAS_CLI_DEFAULT_CAS_SERVER="cas-shared-default"
+export SAS_CLI_PROFILE="lab13-viya35"
+export SAS_CLI_DEFAULT_CAS_SERVER="cas-shared-default"
+export SSL_CERT_FILE="/opt/sasviyarepo/certificates/intermediate/certs/NordicLabs_Bundle.pem"
