@@ -1,15 +1,35 @@
 pipeline {
+    /* The agent directive, which is required, instructs Jenkins to allocate an executor and workspace for the Pipeline. */
+    /* It ensures that the source repository is checked out and made available for steps in the subsequent stages */
     agent any
     environment {
         DISABLE_AUTH = 'true'
         DB_ENGINE    = 'sqlite'
+        VIYA_LAB10_SIRO_CREDS = credentials('viya-lab10-siro')
     }
     stages {
         stage('Build') {
             steps {
-                echo "Database engine is ${DB_ENGINE}"
-                echo "DISABLE_AUTH is ${DISABLE_AUTH}"
-                sh 'printenv'
+                echo "####################################"
+                echo "Workspace= ${env.WORKSPACE}"
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                echo "VIYA_LAB10_SIRO_CREDS_USR= ${VIYA_LAB10_SIRO_CREDS_USR}"
+                echo "VIYA_LAB10_SIRO_CREDS_PWD= ${VIYA_LAB10_SIRO_CREDS_PWD}"
+                echo "####################################"
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            when {
+								expression {
+								currentBuild.result == null || currentBuild.result == 'SUCCESS' 
+						}
+            steps {
+                echo 'Deploying....'
             }
         }
     }
