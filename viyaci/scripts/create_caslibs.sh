@@ -28,11 +28,11 @@ yes y | sas-admin cas caslibs replace-controls --name TESTDATA --source-file "${
 ## ---------------------------------------------------------------
 
 sas-admin cas caslibs create path --source-file "${casblis_def_folder}/SALESDATA-defs.json"
-yes y | sas-admin cas caslibs replace-controls --name HRDATA --source-file "${casblis_acl_folder}/acl_SALESDATA.json"
+yes y | sas-admin cas caslibs replace-controls --name SALESDATA --source-file "${casblis_acl_folder}/acl_SALESDATA.json"
 
 ## ---------------------------------------------------------------
 ## caslib: ENCRYPTDATA
 ## ---------------------------------------------------------------
 
 sas-admin cas caslibs create path --source-file "${casblis_def_folder}/ENCRYPTDATA-defs.json"
-yes y | sas-admin cas caslibs replace-controls --name HRDATA --source-file "${casblis_acl_folder}/acl_ENCRYPTDATA.json"
+yes y | sas-admin cas caslibs replace-controls --name ENCRYPTDATA --source-file "${casblis_acl_folder}/acl_ENCRYPTDATA.json"
