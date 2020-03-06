@@ -3,29 +3,20 @@ pipeline {
     /* It ensures that the source repository is checked out and made available for steps in the subsequent stages */
     agent any
     environment {
-        DISABLE_AUTH = 'true'
-        DB_ENGINE    = 'sqlite'
+        SAS_CLI_PROFILE = "lab13-viyaweb"
         SAS_ADMIN_CREDS = credentials('viya-lab13-siro')
+        SAS_CLI_DEFAULT_CAS_SERVER = "cas-shared-default"
     }
     stages {
         stage('caslibs') {
             steps {
-                echo "####################################"
-                echo "Workspace= ${env.WORKSPACE}"
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                echo "####################################"
-                sh "${env.WORKSPACE}/viyaci/scripts/sas_admin_profile.sh ${SAS_ADMIN_CREDS_USR} ${SAS_ADMIN_CREDS_PSW}"
+                sh "${env.WORKSPACE}/viyaci/scripts/sas_admin_login.sh ${SAS_ADMIN_CREDS_USR} ${SAS_ADMIN_CREDS_PSW}"
                 sh "${env.WORKSPACE}/viyaci/scripts/create_caslibs.sh"
             }
         }
         stage('folders') {
             steps {
-                echo 'Importing Viya Folders...'
-            }
-        }
-        stage('others') {
-            steps {
-                echo 'others ....'
+                sh "${env.WORKSPACE}/viyaci/scripts/import_folders.sh"
             }
         }
     }

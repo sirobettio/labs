@@ -1,0 +1,1 @@
+{"version":1,"connectors":{"table":[{"source":"server=cas-shared-default;library=HRDATA;table=HR_EMPLOYEE_SATISFACTION","target":"server=cas-shared-default;library=HRDATA;table=HR_EMPLOYEE_SATISFACTION"}]}}

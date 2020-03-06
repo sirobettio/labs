@@ -1,7 +1,11 @@
 #!/bin/sh 
 
 mydir=$(dirname "$(readlink -f "$0")")
-source $mydir/sas_admin.settings
+
+if [ -z "$SAS_CLI_DEFAULT_CAS_SERVER" ]; then
+	echo "[WARN] SAS_CLI_DEFAULT_CAS_SERVER not set. Set to: cas-shared-default"
+	export SAS_CLI_DEFAULT_CAS_SERVER="cas-shared-default"
+fi
 
 ## ==================================================
 ## Connect with sas-admin
