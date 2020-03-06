@@ -5,33 +5,27 @@ pipeline {
     environment {
         DISABLE_AUTH = 'true'
         DB_ENGINE    = 'sqlite'
-        VIYA_LAB10_SIRO_CREDS = credentials('viya-lab10-siro')
+        SAS_ADMIN_CREDS = credentials('viya-lab13-siro')
     }
     stages {
-        stage('Build') {
+        stage('caslibs') {
             steps {
                 echo "####################################"
                 echo "Workspace= ${env.WORKSPACE}"
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                echo "VIYA_LAB10_SIRO_CREDS_USR= ${VIYA_LAB10_SIRO_CREDS_USR}"
-                echo "VIYA_LAB10_SIRO_CREDS_PWD= ${VIYA_LAB10_SIRO_CREDS_PSW}"
                 echo "####################################"
-                sh "${env.WORKSPACE}/viyaci/scripts/sas_admin_profile.sh ${VIYA_LAB10_SIRO_CREDS_USR} ${VIYA_LAB10_SIRO_CREDS_PSW}"
+                sh "${env.WORKSPACE}/viyaci/scripts/sas_admin_profile.sh ${SAS_ADMIN_CREDS_USR} ${SAS_ADMIN_CREDS_PSW}"
+                /* sh "${env.WORKSPACE}/viyaci/scripts/create-caslibs.sh" */
             }
         }
-        stage('Test') {
+        stage('folders') {
             steps {
-                echo 'Testing..'
+                echo 'Importing Viya Folders...'
             }
         }
-        stage('Deploy') {
-            when {
-								expression {
-								   currentBuild.result == null || currentBuild.result == 'SUCCESS' 
-						     }
-						}
+        stage('others') {
             steps {
-                echo 'Deploying....'
+                echo 'others ....'
             }
         }
     }
