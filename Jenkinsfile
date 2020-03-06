@@ -3,7 +3,7 @@ pipeline {
     /* It ensures that the source repository is checked out and made available for steps in the subsequent stages */
     agent any
     environment {
-        SAS_CLI_PROFILE = "lab13-viyaweb"
+        SAS_CLI_PROFILE = "lab13-viya35"
         SAS_ADMIN_CREDS = credentials('viya-lab13-siro')
         SAS_CLI_DEFAULT_CAS_SERVER = "cas-shared-default"
     }
