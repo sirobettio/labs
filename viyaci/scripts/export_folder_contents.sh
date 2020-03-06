@@ -1,11 +1,7 @@
 #!/bin/sh 
 
 mydir=$(dirname "$(readlink -f "$0")")
-
-## ====================================
-## Connect with sas-admin
-## ====================================
-. $mydir/sas_admin_profile.sh
+source $mydir/sas_admin.settings
 
 ## ====================================
 ## LIST HERE THE VIYA FOLDERS TO EXPORT
