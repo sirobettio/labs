@@ -6,7 +6,7 @@
     },
     "description": "Datasets for DataScience course.",
     "name": "ECST141",
-    "path": "/sasdata/lab10/caslibs/ECST141",
+    "path": "/sasdata/labs/caslibs/ECST141",
     "scope": "global",
     "server": "cas-shared-default",
     "type": "PATH"

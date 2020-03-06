@@ -4,9 +4,9 @@
         "personal": false,
         "subDirs": false
     },
-    "description": "Datasets for HR.",
-    "name": "HRDATA",
-    "path": "/sasdata/labs/caslibs/HRDATA",
+    "description": "Datasets for ENCRYPTDATA.",
+    "name": "ENCRYPTDATA",
+    "path": "/sasdata/labs/caslibs/ENCRYPTDATA",
     "scope": "global",
     "server": "cas-shared-default",
     "type": "PATH"

@@ -6,7 +6,7 @@
     },
     "description": "Test datasets.",
     "name": "TESTDATA",
-    "path": "/sasdata/lab10/caslibs/TESTDATA",
+    "path": "/sasdata/labs/caslibs/TESTDATA",
     "scope": "global",
     "server": "cas-shared-default",
     "type": "PATH"

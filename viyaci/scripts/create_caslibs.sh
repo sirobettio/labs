@@ -14,16 +14,25 @@ export casblis_def_folder="${mydir}/../caslibs/def"
 ## ---------------------------------------------------------------
 
 sas-admin cas caslibs create path --source-file "${casblis_def_folder}/HRDATA-defs.json"
-
-yes y | sas-admin cas caslibs replace-controls --name HRDATA --source-file "${casblis_acl_folder}/acl_policy_00_ALL_SASAdministrators.json"
-yes y | sas-admin cas caslibs replace-controls --name HRDATA --source-file "${casblis_acl_folder}/acl_policy_01_RW_SASDevelopers.json"
+yes y | sas-admin cas caslibs replace-controls --name HRDATA --source-file "${casblis_acl_folder}/acl_HRDATA.json"
 
 ## ---------------------------------------------------------------
 ## caslib: TESTDATA
 ## ---------------------------------------------------------------
 
 sas-admin cas caslibs create path --source-file "${casblis_def_folder}/TESTDATA-defs.json"
+yes y | sas-admin cas caslibs replace-controls --name TESTDATA --source-file "${casblis_acl_folder}/acl_TESTDATA.json"
 
-yes y | sas-admin cas caslibs replace-controls --name HRDATA --source-file "${casblis_acl_folder}/acl_policy_00_ALL_SASAdministrators.json"
-yes y | sas-admin cas caslibs replace-controls --name HRDATA --source-file "${casblis_acl_folder}/acl_policy_01_RW_SASDevelopers.json"
-yes y | sas-admin cas caslibs replace-controls --name HRDATA --source-file "${casblis_acl_folder}/acl_policy_99_R_AuthenticatedUsers.json"
+## ---------------------------------------------------------------
+## caslib: SALESDATA
+## ---------------------------------------------------------------
+
+sas-admin cas caslibs create path --source-file "${casblis_def_folder}/SALESDATA-defs.json"
+yes y | sas-admin cas caslibs replace-controls --name HRDATA --source-file "${casblis_acl_folder}/acl_SALESDATA.json"
+
+## ---------------------------------------------------------------
+## caslib: ENCRYPTDATA
+## ---------------------------------------------------------------
+
+sas-admin cas caslibs create path --source-file "${casblis_def_folder}/ENCRYPTDATA-defs.json"
+yes y | sas-admin cas caslibs replace-controls --name HRDATA --source-file "${casblis_acl_folder}/acl_ENCRYPTDATA.json"
