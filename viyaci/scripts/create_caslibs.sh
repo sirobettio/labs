@@ -7,8 +7,8 @@ mydir=$(dirname "$(readlink -f "$0")")
 ## ==================================================
 . $mydir/sas_admin_profile.sh
 
-export casblis_acl_folder = $mydir/acl
-export casblis_def_folder = $mydir/def
+export casblis_acl_folder=$mydir/acl
+export casblis_def_folder=$mydir/def
 
 ## ---------------------------------------------------------------
 ## caslib: HRDATA
