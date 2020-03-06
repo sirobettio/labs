@@ -16,7 +16,7 @@ pipeline {
                 echo "VIYA_LAB10_SIRO_CREDS_USR= ${VIYA_LAB10_SIRO_CREDS_USR}"
                 echo "VIYA_LAB10_SIRO_CREDS_PWD= ${VIYA_LAB10_SIRO_CREDS_PSW}"
                 echo "####################################"
-                sh "${env.WORKSPACE}/viyaci/scripts/sas_admin_profile.sh"
+                sh "${env.WORKSPACE}/viyaci/scripts/sas_admin_profile.sh ${VIYA_LAB10_SIRO_CREDS_USR} ${VIYA_LAB10_SIRO_CREDS_PSW}"
             }
         }
         stage('Test') {
