@@ -10,4 +10,5 @@ echo "Arguments:" "$@"
 echo "Arg 0: $0"
 echo "Arg 1: $1"
 
-sas-admin auth login --user siro --password Orion123
+#sas-admin auth login --user siro --password Orion123
+sas-admin auth login --user $1 --password $2
